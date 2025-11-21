@@ -1,5 +1,7 @@
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
 
+const BACKEND_BASE_URL = API_BASE_URL.replace(/\/api$/, '');
+
 export interface User {
   email: string;
   password?: string;
@@ -17,15 +19,18 @@ export interface AuthResponse {
 }
 
 class ApiService {
-  private async request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
+  private async request<T>(
+    endpoint: string,
+    options: RequestInit = {}
+  ): Promise<T> {
     const headers = {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
       ...options.headers,
     };
 
-    const token = localStorage.getItem('auth_token');
+    const token = localStorage.getItem("auth_token");
     if (token) {
-      (headers as any)['Authorization'] = `Bearer ${token}`;
+      (headers as any)["Authorization"] = `Bearer ${token}`;
     }
 
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
@@ -36,33 +41,37 @@ class ApiService {
     const data = await response.json();
 
     if (!response.ok) {
-      throw new Error(data.message || 'Something went wrong');
+      throw new Error(data.message || "Something went wrong");
     }
 
     return data;
   }
 
-  async login(credentials: Pick<User, 'email' | 'password'>): Promise<AuthResponse> {
-    return this.request<AuthResponse>('/auth/login', {
-      method: 'POST',
+  async login(
+    credentials: Pick<User, "email" | "password">
+  ): Promise<AuthResponse> {
+    return this.request<AuthResponse>("/auth/login", {
+      method: "POST",
       body: JSON.stringify(credentials),
     });
   }
 
   async register(userData: User): Promise<AuthResponse> {
-    return this.request<AuthResponse>('/auth/register', {
-      method: 'POST',
+    return this.request<AuthResponse>("/auth/register", {
+      method: "POST",
       body: JSON.stringify(userData),
     });
   }
 
   initiateGoogleLogin() {
-    window.location.href = 'http://localhost:8080/oauth2/authorization/google';
+    window.location.href = `${BACKEND_BASE_URL}/oauth2/authorization/google`;
   }
 
-  async createCheckoutSession(items: { id: string, title: string, price: number }[]): Promise<{ checkoutUrl: string }> {
-    return this.request<{ checkoutUrl: string }>('/checkout/create', {
-      method: 'POST',
+  async createCheckoutSession(
+    items: { id: string; title: string; price: number }[]
+  ): Promise<{ checkoutUrl: string }> {
+    return this.request<{ checkoutUrl: string }>("/checkout/create", {
+      method: "POST",
       body: JSON.stringify({ items }),
     });
   }

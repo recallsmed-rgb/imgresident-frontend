@@ -1,4 +1,5 @@
 import React from "react";
+import heroImg from "/hero-img.avif";
 
 const Hero: React.FC = () => {
   return (
@@ -63,7 +64,7 @@ const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent z-10"></div>
 
               <img
-                src="public/hero-img.avif"
+                src={heroImg}
                 alt="Residents collaborating with a mentor"
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
               />
