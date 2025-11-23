@@ -1,0 +1,65 @@
+{
+  "pricingPlans": [
+    {
+      "id": "overview",
+      "title": "USMLE Overview Session",
+      "price": "$85",
+      "priceSuffix": "",
+      "features": [
+        "Personalized Roadmap",
+        "Comprehensive CV Review",
+        "Q&A with a Resident"
+      ],
+      "ctaLabel": "Book a Session",
+      "highlighted": false,
+      "badge": ""
+    },
+    {
+      "id": "mentorship",
+      "title": "Residency Mentorship",
+      "price": "$200",
+      "priceSuffix": "/ month",
+      "features": [
+        "Monthly Check-ins",
+        "Application Strategy",
+        "Interview Preparation",
+        "Unlimited Email Support"
+      ],
+      "ctaLabel": "Start Mentorship",
+      "highlighted": true,
+      "badge": "Most Popular"
+    }
+  ],
+  "services": [
+    {
+      "icon": "BookOpen",
+      "title": "USMLE Step 1 Tutoring",
+      "desc": "Personalized study plans and a focus on high-yield content to build your foundational knowledge."
+    },
+    {
+      "icon": "Stethoscope",
+      "title": "USMLE Step 2 CK Guidance",
+      "desc": "Master clinical cases and develop effective exam strategies for your Step 2 CK preparation."
+    },
+    {
+      "icon": "FileText",
+      "title": "ERAS Application Review",
+      "desc": "Optimize your ERAS application with expert personal statement editing and CV refinement."
+    },
+    {
+      "icon": "Users",
+      "title": "Residency Interview Coaching",
+      "desc": "Develop confidence and polish your communication skills with realistic mock interviews and feedback."
+    },
+    {
+      "icon": "Microscope",
+      "title": "Research Mentorship",
+      "desc": "Strengthen your research portfolio and stand out with dedicated mentorship and guidance."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "End-to-End Residency Package",
+      "desc": "An all-inclusive offering combining our expert services for a seamless path to residency."
+    }
+  ]
+}

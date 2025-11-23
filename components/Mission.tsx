@@ -87,7 +87,7 @@ const Mission: React.FC = () => {
           {/* Founder 1 */}
           <div className="flex flex-col sm:flex-row items-center gap-8 bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl">
             <img 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvsSzeDuMoYE8wxpfZJvZ5MHTq2qlstg6RaReSYk309wFeV5N8EyB-hzj4KxfTVDsP8CrwEQT8l6-U3ai71Sa18ByPbpIodMFSYyJfE_tUR_GA3MS5WosA_QVMDa86UY86VHedIqWESaZuEza621ly9tNLvKxz0gM09jvrUUHqGQ3NC2268zBAknJ5v78wLewGA7UFJc01KLWWaabf1KElWP81WsenrSAgTq7WKzmqLh6-x760_ghrfF4QnJJGHUXoLoA1anM4oYk" 
+              src="../author2.avif" 
               alt="Dr. Anjali Sharma" 
               className="w-32 h-32 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-md"
             />
@@ -103,7 +103,7 @@ const Mission: React.FC = () => {
           {/* Founder 2 */}
           <div className="flex flex-col sm:flex-row items-center gap-8 bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl">
             <img 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1FgD0nSmGv4HOWfUZNq-P8mmrgct-O8RCSRnoUuD3bPy-ZOZJEVk_-SP09ol6j1GVguzobyh8miLb31pDZH28uwanR_PYNUmjQvp5eujogp9lE5xVCbPYEU2Q3ZNKbVb4_yaU4sFKHQJmQw9eymQVLDnt5QbHskEBVkXMt1Ip--UWzGjsVORVK7ha84vqVtfbQ22zZXywKIHMm67Km0wguJrv9FjjXMk6bcSQmt4tO558E0HDPjRktSJBnKdDVVBKzjfIHTVKwGY" 
+              src="../author1.avif" 
               alt="Dr. Rohan Patel" 
               className="w-32 h-32 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-md"
             />
