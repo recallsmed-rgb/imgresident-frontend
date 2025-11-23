@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           {/* Text Content */}
           <div className="w-full lg:w-1/2 text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-slate-900 dark:text-white leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-slate-900 leading-tight">
               Your Residency Journey{" "}
               <span className="text-primary relative inline-block">
                 Starts Here!
@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
                 </svg>
               </span>
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
+            <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed">
               We provide comprehensive A–Z services that guide you from scratch
               to match. Join a community of achievers and get the mentorship you
               deserve.
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
                     .getElementById("contact")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="px-8 py-4 text-base font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 rounded-xl hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
+                className="px-8 py-4 text-base font-bold text-slate-700 bg-slate-100 rounded-xl hover:bg-slate-200 transition-all"
               >
                 Book a Free Intro Call
               </button>
@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="w-full lg:w-1/2 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group bg-white dark:bg-slate-800">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group bg-white">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent z-10"></div>
 
               <img

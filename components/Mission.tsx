@@ -26,12 +26,12 @@ const Mission: React.FC = () => {
   ];
 
   return (
-    <section id="mission" className="py-20 bg-white dark:bg-slate-900">
+    <section id="mission" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Mission Statement Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-slate-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-slate-900">
             Mission Statement
           </h2>
           <p className="mt-4 text-xl text-primary font-medium italic">
@@ -41,11 +41,11 @@ const Mission: React.FC = () => {
         </div>
 
         {/* Welcome Box */}
-        <div className="bg-slate-50 dark:bg-slate-800/50 rounded-2xl shadow-sm p-8 sm:p-12 mb-20 border border-slate-100 dark:border-slate-700">
-          <h3 className="text-2xl font-serif font-bold text-slate-900 dark:text-white mb-6">
+        <div className="bg-slate-50 rounded-2xl shadow-sm p-8 sm:p-12 mb-20 border border-slate-100">
+          <h3 className="text-2xl font-serif font-bold text-slate-900 mb-6">
             Welcome, dear Achievers,
           </h3>
-          <div className="space-y-4 text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
+          <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
             <p>
               Our mission is to empower International Medical Graduates (IMGs) on their path to securing a residency in the United States. We understand the unique challenges and hurdles you face, because we've been there. We are committed to providing comprehensive, evidence-based guidance and unwavering support throughout your USMLE and residency application journey.
             </p>
@@ -57,20 +57,20 @@ const Mission: React.FC = () => {
 
         {/* Values Grid */}
         <div className="text-center mb-12">
-          <h3 className="text-3xl font-serif font-bold text-slate-900 dark:text-white">
+          <h3 className="text-3xl font-serif font-bold text-slate-900">
             Vision and Values
           </h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
           {values.map((value, idx) => (
-            <div key={idx} className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-slate-100 dark:border-slate-700 text-center group">
+            <div key={idx} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-slate-100 text-center group">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
                 {value.icon}
               </div>
-              <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-3">
+              <h4 className="text-xl font-bold text-slate-900 mb-3">
                 {value.title}
               </h4>
-              <p className="text-slate-600 dark:text-slate-400 text-sm">
+              <p className="text-slate-600 text-sm">
                 {value.desc}
               </p>
             </div>
@@ -79,38 +79,38 @@ const Mission: React.FC = () => {
 
         {/* Founders */}
         <div className="text-center mb-12">
-          <h3 className="text-3xl font-serif font-bold text-slate-900 dark:text-white">
+          <h3 className="text-3xl font-serif font-bold text-slate-900">
             Meet Our Founders
           </h3>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Founder 1 */}
-          <div className="flex flex-col sm:flex-row items-center gap-8 bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl">
+          <div className="flex flex-col sm:flex-row items-center gap-8 bg-slate-50 p-6 rounded-2xl">
             <img 
               src="../author2.avif" 
               alt="Dr. Anjali Sharma" 
-              className="w-32 h-32 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-md"
+              className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-md"
             />
             <div className="text-center sm:text-left">
-              <h4 className="text-xl font-bold text-slate-900 dark:text-white">Dr. Anjali Sharma</h4>
+              <h4 className="text-xl font-bold text-slate-900">Dr. Anjali Sharma</h4>
               <p className="text-primary font-medium mb-2">Co-Founder & Chief Mentor</p>
-              <p className="text-slate-600 dark:text-slate-400 text-sm">
+              <p className="text-slate-600 text-sm">
                 A former IMG who successfully matched into Internal Medicine, Dr. Sharma is passionate about guiding the next generation of physicians.
               </p>
             </div>
           </div>
 
           {/* Founder 2 */}
-          <div className="flex flex-col sm:flex-row items-center gap-8 bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl">
+          <div className="flex flex-col sm:flex-row items-center gap-8 bg-slate-50 p-6 rounded-2xl">
             <img 
               src="../author1.avif" 
               alt="Dr. Rohan Patel" 
-              className="w-32 h-32 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-md"
+              className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-md"
             />
             <div className="text-center sm:text-left">
-              <h4 className="text-xl font-bold text-slate-900 dark:text-white">Dr. Rohan Patel</h4>
+              <h4 className="text-xl font-bold text-slate-900">Dr. Rohan Patel</h4>
               <p className="text-primary font-medium mb-2">Co-Founder & Program Director</p>
-              <p className="text-slate-600 dark:text-slate-400 text-sm">
+              <p className="text-slate-600 text-sm">
                 With a background in medical education, Dr. Patel specializes in curriculum design and strategic application planning.
               </p>
             </div>
