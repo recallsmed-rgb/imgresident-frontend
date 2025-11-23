@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ShoppingCart } from 'lucide-react';
-import { useCart } from '../context/CartContext';
+import { Menu, X } from 'lucide-react';
 
-interface HeaderProps {
-  onOpenLogin: () => void;
-}
 
-const Header: React.FC<HeaderProps> = ({ onOpenLogin }) => {
+const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
-  const { toggleCart, items } = useCart();
-  const cartItemCount = items.length;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,21 +14,21 @@ const Header: React.FC<HeaderProps> = ({ onOpenLogin }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-const scrollToSection = (id: string) => {
-  const element = document.getElementById(id);
-  if (!element) return;
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (!element) return;
 
-  const headerOffset = 90;
-  const elementPosition = element.getBoundingClientRect().top;
-  const offsetPosition = elementPosition + window.scrollY - headerOffset;
+    const headerOffset = 90;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
-  window.scrollTo({
-    top: offsetPosition,
-    behavior: "smooth",
-  });
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
 
-  setMobileMenuOpen(false);
-};
+    setMobileMenuOpen(false);
+  };
 
   const navLinks = [
     { name: 'Mission', id: 'mission' },
@@ -85,28 +78,6 @@ const scrollToSection = (id: string) => {
             ))}
           </div>
 
-          {/* Desktop Actions */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <button 
-              onClick={toggleCart}
-              className="flex items-center text-sm font-medium text-primary hover:text-primary-dark transition-colors relative"
-            >
-              <ShoppingCart className="w-5 h-5 mr-1" />
-              Cart
-              {cartItemCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                  {cartItemCount}
-                </span>
-              )}
-            </button>
-            <button
-              onClick={onOpenLogin}
-              className="px-5 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary-dark transition-colors shadow-sm hover:shadow-md"
-            >
-              Login / Sign up
-            </button>
-          </div>
-
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
@@ -122,7 +93,7 @@ const scrollToSection = (id: string) => {
         {mobileMenuOpen && (
           <div className="lg:hidden mt-4 bg-white dark:bg-slate-900 rounded-lg shadow-xl border border-slate-100 dark:border-slate-800 p-4 absolute left-4 right-4 top-16 z-40 animate-fade-in">
             <div className="flex flex-col space-y-4">
-               <button 
+              <button 
                 onClick={() => scrollToSection('home')}
                 className="text-left text-base font-medium text-slate-700 dark:text-slate-200 hover:text-primary"
               >
@@ -138,25 +109,6 @@ const scrollToSection = (id: string) => {
                 </button>
               ))}
               <div className="h-px bg-slate-200 dark:bg-slate-700 my-2" />
-              <button 
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  toggleCart();
-                }}
-                className="flex items-center text-base font-medium text-primary"
-              >
-                <ShoppingCart className="w-5 h-5 mr-2" />
-                Cart ({cartItemCount})
-              </button>
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenLogin();
-                }}
-                className="w-full py-2 text-center text-base font-medium text-white bg-primary rounded-lg hover:bg-primary-dark"
-              >
-                Login / Sign up
-              </button>
             </div>
           </div>
         )}

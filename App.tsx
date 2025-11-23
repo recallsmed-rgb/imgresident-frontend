@@ -7,13 +7,9 @@ import Blog from "./components/Blog";
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import LoginModal from "./components/LoginModal";
-import CartDrawer from "./components/CartDrawer";
 import PrivacyPolicy from "./components/PrivacyPolicy";
-import { CartProvider } from "./context/CartContext";
 
 const App: React.FC = () => {
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
   const [privacyReturnPosition, setPrivacyReturnPosition] = useState<number | null>(null);
 
@@ -34,26 +30,22 @@ const App: React.FC = () => {
   };
 
   return (
-    <CartProvider>
-      <div className="min-h-screen flex flex-col">
-        <Header onOpenLogin={() => setIsLoginOpen(true)} />
+    <div className="min-h-screen flex flex-col">
+      <Header />
 
-        <main>
-          <Hero />
-          <Mission />
-          <Services />
-          <Blog />
-          <FAQ />
-          <Contact onOpenPrivacy={openPrivacy} />
-        </main>
+      <main>
+        <Hero />
+        <Mission />
+        <Services />
+        <Blog />
+        <FAQ />
+        <Contact onOpenPrivacy={openPrivacy} />
+      </main>
 
-        <Footer />
+      <Footer />
 
-        {isLoginOpen && <LoginModal onClose={() => setIsLoginOpen(false)} />}
-        <PrivacyPolicy isOpen={isPrivacyOpen} onClose={closePrivacy} />
-        <CartDrawer />
-      </div>
-    </CartProvider>
+      <PrivacyPolicy isOpen={isPrivacyOpen} onClose={closePrivacy} />
+    </div>
   );
 };
 

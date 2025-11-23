@@ -1,10 +1,13 @@
-
 import React from 'react';
 import { BookOpen, Stethoscope, FileText, Users, Microscope, Sparkles, CheckCircle } from 'lucide-react';
-import { useCart } from '../context/CartContext';
 
 const Services: React.FC = () => {
-  const { addToCart } = useCart();
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const servicesList = [
     {
@@ -73,16 +76,11 @@ const Services: React.FC = () => {
                 </li>
               ))}
             </ul>
-            <button 
-                onClick={() => addToCart({
-                  id: 'plan_overview_session',
-                  title: 'USMLE Overview Session',
-                  price: 85,
-                  type: 'service'
-                })}
-                className="w-full py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary-dark transition-colors flex justify-center items-center"
+            <button
+              onClick={scrollToContact}
+              className="w-full py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary-dark transition-colors flex justify-center items-center"
             >
-              Add to Cart
+              Book a Session
             </button>
           </div>
 
@@ -104,16 +102,11 @@ const Services: React.FC = () => {
                 </li>
               ))}
             </ul>
-            <button 
-                onClick={() => addToCart({
-                  id: 'plan_mentorship_subscription',
-                  title: 'Residency Mentorship',
-                  price: 200,
-                  type: 'plan'
-                })}
-                className="w-full py-3 bg-slate-900 dark:bg-primary dark:text-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 dark:hover:bg-primary-light transition-colors flex justify-center items-center"
+            <button
+              onClick={scrollToContact}
+              className="w-full py-3 bg-slate-900 dark:bg-primary dark:text-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 dark:hover:bg-primary-light transition-colors flex justify-center items-center"
             >
-               Add to Cart
+              Start Mentorship
             </button>
           </div>
 
