@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "title": "5 Mistakes to Avoid in Your USMLE Step 1 Prep",
+    "excerpt": "Learn the common pitfalls that can hinder your success and how to steer clear of them for a top score.",
+    "image": "/blog1.avif",
+    "content": [
+      "Navigating the USMLE Step 1 is a monumental task for any medical student, but especially for International Medical Graduates (IMGs). The pressure is immense, and the stakes are high. While dedication and hard work are crucial, avoiding common mistakes is just as important. Here are five critical pitfalls to steer clear of during your preparation.",
+      "<strong>1. Neglecting Foundational Concepts:</strong> Many students jump directly into memorizing facts from review books without ensuring they have a solid understanding of the underlying physiological and pathological principles. This approach can lead to trouble when questions require clinical reasoning and integration of knowledge.",
+      "<strong>2. Ineffective Use of Question Banks:</strong> Simply doing thousands of questions isn't enough. The key is to learn from them. This means thoroughly reviewing every question, including the ones you got right, to understand the rationale behind the correct and incorrect answers. Failing to do this turns a powerful learning tool into a simple assessment exercise.",
+      "<strong>3. Ignoring Mental and Physical Health:</strong> The marathon of Step 1 prep can lead to burnout. Sacrificing sleep, nutrition, and exercise for extra study hours is a counterproductive strategy in the long run. A well-rested mind is more efficient at learning and retaining information.",
+      "<strong>4. Underestimating the Importance of a Schedule:</strong> \"Winging it\" is not a viable study plan. A structured, realistic, and flexible schedule is your roadmap to success. It helps ensure comprehensive content coverage, allocates time for revision, and incorporates necessary breaks to prevent exhaustion.",
+      "<strong>5. Passive Learning Instead of Active Recall:</strong> Reading and re-reading material or watching videos without actively engaging with the content leads to poor retention. Techniques like the Feynman method, creating flashcards, and self-testing force you to retrieve information, which solidifies it in your memory. Avoid the illusion of competence that comes from passive review."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Crafting the Perfect Personal Statement",
+    "excerpt": "Your personal statement is your story. Discover how to write a compelling narrative that stands out to residency programs.",
+    "image": "/blog2.avif",
+    "content": [
+      "The personal statement is one of the few qualitative parts of your application where you can truly shine. It's not just a rehash of your CV; it's your chance to explain the 'why' behind your journey.",
+      "Focus on a specific moment that crystallized your commitment to your chosen specialty. Be authentic. Admissions committees read thousands of these; they can spot a generic essay from a mile away."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "A Guide to U.S. Clinical Electives for IMGs",
+    "excerpt": "Unlock the secrets to securing valuable U.S. clinical experience that will significantly boost your residency application.",
+    "image": "/blog3.avif",
+    "content": [
+      "U.S. Clinical Experience (USCE) is paramount. It demonstrates your familiarity with the U.S. healthcare system and allows you to garner strong Letters of Recommendation from U.S. physicians.",
+      "Start planning early. Look for observerships or externships at teaching hospitals. Networking plays a huge role here—don't be afraid to reach out to programs or mentors."
+    ]
+  }
+]
