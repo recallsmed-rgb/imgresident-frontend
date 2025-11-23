@@ -1,29 +1,10 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import faqsData from '../data/faqs.json';
+
+const faqs = faqsData as { question: string; answer: string }[];
 
 const FAQ: React.FC = () => {
-  const faqs = [
-    {
-      question: "What is the best timeline to prepare for USMLE Step 1?",
-      answer: "The ideal timeline varies, but we generally recommend a dedicated period of 6-8 months for comprehensive preparation. Our personalized plans can help you structure your study schedule effectively based on your specific needs and timeline."
-    },
-    {
-      question: "How important are research publications for matching into residency?",
-      answer: "Research publications can significantly strengthen your residency application, especially for competitive specialties. However, the importance varies. We guide our students on how to strategically build their research portfolio to align with their career goals."
-    },
-    {
-      question: "What is included in the premium consultation package?",
-      answer: "Our premium package includes one-on-one mentorship, a personalized study plan, personal statement and CV editing, mock interviews, and continuous support throughout your application cycle. It's our most comprehensive service designed for success."
-    },
-    {
-      question: "Do you offer guidance for writing personal statements?",
-      answer: "Absolutely. We provide expert guidance on crafting a compelling personal statement that highlights your unique story, skills, and motivations. Our team helps you from brainstorming initial ideas to final polishing, ensuring your statement stands out."
-    },
-    {
-      question: "How can I schedule a one-on-one session?",
-      answer: "You can easily schedule a one-on-one session through our website's booking portal. Simply choose an available time slot that works for you, and we'll confirm your appointment via email with all the necessary details."
-    }
-  ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
